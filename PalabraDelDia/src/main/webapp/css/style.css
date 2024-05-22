@@ -48,4 +48,21 @@ h1.titulo {
 
 .boton {
     padding: 8px 13px; /* Añade padding interno de 8px arriba/abajo y 13px izquierda/derecha */
+    margin: 10px;
+}
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.centrado{
+    justify-content: center;
+}
+div{
+    margin: 50px auto;
+}
+#divLetras{
+    margin-top: 300px;
 }

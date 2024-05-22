@@ -18,14 +18,17 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="script/PalabraDelDia.js"></script>
 </head>
-<body>
-         <div>
+<body class="contenedor">
+         <div class="centrado">
              <h1>PalabraDelDia</h1>
              <div class="letras">
 <%--                 se insertaran los imput necesarios para adivinar la palabra--%>
+
+
              </div>
          </div>
-<div id="divLetras" class="col-4">
+
+<div id="divLetras" class="centrado">
 
 
 </div>

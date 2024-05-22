@@ -37,8 +37,12 @@ body::before {
 
 h1.titulo {
     color: #172ebd; /* Establece el color del texto del título */
+    font-family: Bahnschrift, sans-serif; /* Establece la fuente del texto */
+    font-size: 2em; /* Establece el tamaño de la fuente */
+    font-weight: bold; /* Establece el grosor de la fuente a negrita */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    /* Agrega otras propiedades de estilo según sea necesario */
 }
-
 .letras span {
     padding: 15px 25px; /* Añade padding interno de 15px arriba/abajo y 25px izquierda/derecha */
     border: 2px solid #931919; /* Añade un borde de 2px de color rojo oscuro alrededor del span */

@@ -1,7 +1,7 @@
 window.onload = function () {
     let palabra = ['azul', 'amarillo', 'rojo', 'verde', 'turquesa', 'rosa', 'morado', 'malva', 'blanco', 'negro', 'maron', 'naranja', 'violeta', 'lila', 'beige'];
     // Array con 15 palabras diferentes
-    let palabraSeleccionada = palabra[seleccionarPalabra()];
+    let palabraSeleccionada = palabra[seleccionarPalabra()].toUpperCase();
     // Selecciona una palabra al azar del array
     console.log(palabraSeleccionada);
     // Imprime la palabra seleccionada en la consola
@@ -13,6 +13,7 @@ window.onload = function () {
     // Imprime la longitud de la palabra (número de letras) en la consola
     crearCuadros(palabraAdivinar.length);
     // Llama a la función para crear cuadros en función de la longitud de la palabra
+    comprobarLetraUser(palabraSeleccionada);
 }
 
 // Función para seleccionar una palabra al azar del array
@@ -66,4 +67,14 @@ function crearCuadros(longitud) {
         letrasAdivinar.appendChild(unaLetra);
         // Agrega el span al contenedor
     }
+}
+function comprobarLetraUser(palabra){
+    let letraUser=document.querySelectorAll(".boton-letra");
+    letraUser.forEach(function (elem) {
+        elem.addEventListener("click",function (){
+            console.log(elem.value);
+            console.log(palabra);
+        })
+
+    })
 }

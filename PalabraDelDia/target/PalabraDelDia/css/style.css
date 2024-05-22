@@ -1,50 +1,51 @@
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+    height: 100%; /* Asegura que el elemento html y body ocupen toda la altura de la ventana del navegador */
+    margin: 0; /* Elimina el margen predeterminado del navegador */
+    padding: 0; /* Elimina el padding predeterminado del navegador */
 }
 
 body {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #172ebd; /* Cambia el color del texto */
+    position: relative; /* Define la posición relativa del body para posicionar el pseudo-elemento ::before */
+    display: flex; /* Usa Flexbox para el contenido del body */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    color: #172ebd; /* Establece el color del texto */
 }
 
 body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../img/img.png'); /* Ruta de la imagen de fondo */
-    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
-    background-position: center; /* Centra la imagen horizontal y verticalmente */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    opacity: 0.5; /* Controla la transparencia de la imagen */
-    z-index: -1; /* Asegura que el contenido de la página esté por encima de la imagen */
+    content: ""; /* Crea un pseudo-elemento vacío */
+    position: absolute; /* Posiciona el pseudo-elemento absolutamente dentro del body */
+    top: 0; /* Alinea el pseudo-elemento en la parte superior del body */
+    left: 0; /* Alinea el pseudo-elemento en la parte izquierda del body */
+    width: 100%; /* Hace que el pseudo-elemento ocupe todo el ancho del body */
+    height: 100%; /* Hace que el pseudo-elemento ocupe toda la altura del body */
+    background-image: url('../img/img.png'); /* Especifica la ruta de la imagen de fondo */
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el pseudo-elemento */
+    background-position: center; /* Centra la imagen de fondo horizontal y verticalmente */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    opacity: 0.5; /* Ajusta la transparencia de la imagen de fondo */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido del body */
 }
 
 .container {
-    text-align: center;
-    background-color: rgba(175, 188, 215, 0.8); /* Fondo semitransparente para mejorar la legibilidad */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra el texto dentro del contenedor */
+    background-color: rgba(175, 188, 215, 0.8); /* Aplica un color de fondo semitransparente */
+    padding: 20px; /* Añade padding interno de 20px alrededor del contenido */
+    border-radius: 10px; /* Redondea las esquinas del contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade una sombra ligera alrededor del contenedor */
 }
 
 h1.titulo {
-    color: #172ebd; /* Color dorado para el título */
+    color: #172ebd; /* Establece el color del texto del título */
 }
-.letras span{
 
-    padding: 15px 25px;
-    border: 2px solid #931919;
-    border-radius: 5px;
-    margin-right: 5px;
+.letras span {
+    padding: 15px 25px; /* Añade padding interno de 15px arriba/abajo y 25px izquierda/derecha */
+    border: 2px solid #931919; /* Añade un borde de 2px de color rojo oscuro alrededor del span */
+    border-radius: 5px; /* Redondea las esquinas del borde */
+    margin-right: 5px; /* Añade un margen derecho de 5px */
 }
-.boton{
-    padding: 8px 13px;
+
+.boton {
+    padding: 8px 13px; /* Añade padding interno de 8px arriba/abajo y 13px izquierda/derecha */
 }

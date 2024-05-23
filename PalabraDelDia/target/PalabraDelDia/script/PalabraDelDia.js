@@ -64,17 +64,37 @@ function crearCuadros(longitud) {
         // Agrega la clase "letras" al contenedor (por si acaso no estaba ya)
         let unaLetra = document.createElement("span");
         // Crea un elemento span para cada letra
+        unaLetra.setAttribute("id", String(i));
+        // Agrega atributos
+        unaLetra.classList.add("cuadros");
         letrasAdivinar.appendChild(unaLetra);
         // Agrega el span al contenedor
     }
 }
-function comprobarLetraUser(palabra){
-    let letraUser=document.querySelectorAll(".boton-letra");
+
+function comprobarLetraUser(palabra) {
+    let cuadroLetras = document.querySelectorAll(".cuadros");
+    let letraUser = document.querySelectorAll(".boton-letra");
     letraUser.forEach(function (elem) {
-        elem.addEventListener("click",function (){
+        elem.addEventListener("click", function () {
+            elem.disabled = true; // Bloquea el botón después de ser seleccionado
+            let letraEncontrada = false;
             console.log(elem.value);
             console.log(palabra);
-        })
+            for (let i = 0; i < palabra.length; i++) {
+                if (palabra[i] == elem.value) {
+                    console.log(i);
+                    cuadroLetras[i].innerHTML = elem.value;
+                    cuadroLetras[i].style.color = 'black'; // Marca la letra acertada en verde
+                    letraEncontrada = true;
+                }
+            }
+            if (letraEncontrada) {
+                elem.style.backgroundColor = 'green'; // Marca el botón de la letra acertada en verde
+            } else {
+                elem.style.backgroundColor = 'red'; // Marca el botón de la letra fallida en rojo
+            }
+        });
+    });
 
-    })
 }

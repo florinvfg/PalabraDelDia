@@ -19,23 +19,18 @@
     <script src="script/PalabraDelDia.js"></script>
 </head>
 <body class="contenedor">
-         <div class="centrado">
-             <h1>PalabraDelDia</h1>
-             <div class="letras">
-<%--                 se insertaran los imput necesarios para adivinar la palabra--%>
-             </div>
-             <p id="mensaje" class="mensaje"></p>
-             <div id="marquesina-container"></div> <!-- Contenedor para la marquesina -->
-         </div>
-
-             </div>
-         </div>
-
-<div id="divLetras" class="centrado">
-
-
+<div class="centrado">
+    <h1>PalabraDelDia</h1>
+    <div class="letras">
+        <%-- se insertaran los imput necesarios para adivinar la palabra --%>
+    </div>
+    <p id="mensaje" class="mensaje"></p>
+    <div id="marquesina-container"></div> <!-- Contenedor para la marquesina -->
 </div>
-
-
+<div id="divLetras" class="centrado">
+    <%-- Botones para iniciar una nueva partida y salir --%>
+    <button onclick="nuevaPartida()">Nueva Partida</button>
+    <button onclick="salir()">Salir</button>
+</div>
 </body>
 </html>

@@ -1,6 +1,11 @@
+
 window.onload = function () {
     let palabra = ['azul', 'amarillo', 'rojo', 'verde', 'turquesa', 'rosa', 'morado', 'malva', 'blanco', 'negro', 'maron', 'naranja', 'violeta', 'lila', 'beige'];
     // Array con 15 palabras diferentes
+    jugarJuego(palabra);
+}
+
+function jugarJuego(palabra) {
     let palabraSeleccionada = palabra[seleccionarPalabra()].toUpperCase();
     // Selecciona una palabra al azar del array
     console.log(palabraSeleccionada);
@@ -118,4 +123,14 @@ function mostrarMarquesina(mensaje) {
     marquesina.classList.add("marquesina");
     marquesina.textContent = mensaje;
     marquesinaContainer.appendChild(marquesina);
+}
+
+// Función para iniciar una nueva partida
+function nuevaPartida() {
+    location.reload();
+}
+
+// Función para salir del programa
+function salir() {
+    window.close();
 }

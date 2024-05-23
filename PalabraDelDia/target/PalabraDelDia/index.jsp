@@ -23,7 +23,10 @@
              <h1>PalabraDelDia</h1>
              <div class="letras">
 <%--                 se insertaran los imput necesarios para adivinar la palabra--%>
-
+             </div>
+             <p id="mensaje" class="mensaje"></p>
+             <div id="marquesina-container"></div> <!-- Contenedor para la marquesina -->
+         </div>
 
              </div>
          </div>

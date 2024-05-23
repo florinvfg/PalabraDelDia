@@ -70,3 +70,19 @@ div{
 #divLetras{
     margin-top: 300px;
 }
+.marquesina {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: marquesina 10s linear infinite;
+    color: #71dc0b;
+    font-size: 3.5em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@keyframes marquesina {
+    from { transform: translateX(180%); }
+    to { transform: translateX(-180%); }
+}

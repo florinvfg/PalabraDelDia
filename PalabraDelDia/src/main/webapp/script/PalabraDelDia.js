@@ -75,8 +75,14 @@ function crearCuadros(longitud) {
 function comprobarLetraUser(palabra) {
     let cuadroLetras = document.querySelectorAll(".cuadros");
     let letraUser = document.querySelectorAll(".boton-letra");
+    let intentosRestantes = palabra.length; // Variable para contar las letras faltantes
+
     letraUser.forEach(function (elem) {
         elem.addEventListener("click", function () {
+            if (intentosRestantes <= 0) {
+                return; // Si no hay más intentos, no hacer nada
+            }
+
             elem.disabled = true; // Bloquea el botón después de ser seleccionado
             let letraEncontrada = false;
             console.log(elem.value);
@@ -85,8 +91,9 @@ function comprobarLetraUser(palabra) {
                 if (palabra[i] == elem.value) {
                     console.log(i);
                     cuadroLetras[i].innerHTML = elem.value;
-                    cuadroLetras[i].style.color = 'black'; // Marca la letra acertada en verde
+                    cuadroLetras[i].style.color = 'black'; // Marca la letra acertada en negro
                     letraEncontrada = true;
+                    intentosRestantes--; // Decrementa la cuenta de letras faltantes
                 }
             }
             if (letraEncontrada) {
@@ -94,7 +101,21 @@ function comprobarLetraUser(palabra) {
             } else {
                 elem.style.backgroundColor = 'red'; // Marca el botón de la letra fallida en rojo
             }
+
+            if (intentosRestantes <= 0) {
+                letraUser.forEach(function (boton) {
+                    boton.disabled = true; // Deshabilita todos los botones
+                });
+                mostrarMarquesina("¡Felicidades! Has adivinado la palabra."); // Mostrar mensaje de éxito en marquesina
+            }
         });
     });
+}
 
+function mostrarMarquesina(mensaje) {
+    let marquesinaContainer = document.getElementById("marquesina-container");
+    let marquesina = document.createElement("div");
+    marquesina.classList.add("marquesina");
+    marquesina.textContent = mensaje;
+    marquesinaContainer.appendChild(marquesina);
 }

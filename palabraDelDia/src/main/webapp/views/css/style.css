@@ -1,0 +1,37 @@
+.letras span{
+    padding: 15px 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+div{
+    margin: 35px auto;
+}
+.boton{
+    padding: 10px 15px;
+    margin: 5px;
+}
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.centrado{
+    text-align: center;
+}
+.nuevaP,.salir{
+    visibility: hidden;
+    padding: 15px 20px;
+    color:azure;
+    background-color: darkgrey;
+}
+.nuevaP:hover,.salir:hover{
+    background-color: azure;
+    color:grey;
+    border:1px solid grey;
+}
+*{
+    font-family: "Calibri Light" ;
+}
